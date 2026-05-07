@@ -17,6 +17,8 @@ import { SettingsServicesPanel } from "./SettingsServicesPanel";
 import { SettingsContext, useSettings } from "./context";
 import { SettingsLibraryPanel } from "./SettingsLibraryPanel";
 import { SettingsSecurityPanel } from "./SettingsSecurityPanel";
+import { SettingsUsersPanel } from "./SettingsUsersPanel";
+import { SettingsSharingPanel } from "./SettingsSharingPanel";
 import Changelog from "../Changelog/Changelog";
 import { TroubleshootingModeButton } from "../TroubleshootingMode/TroubleshootingModeButton";
 import { useTroubleshootingMode } from "../TroubleshootingMode/useTroubleshootingMode";
@@ -26,6 +28,8 @@ const validTabs = [
   "library",
   "interface",
   "security",
+  "users",
+  "sharing",
   "metadata-providers",
   "services",
   "system",
@@ -80,6 +84,20 @@ const SettingTabs: React.FC<{ tab: TabKey }> = ({ tab }) => {
               <LinkContainer to="/settings?tab=security">
                 <Nav.Link eventKey="security">
                   <FormattedMessage id="config.categories.security" />
+                </Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
+            <Nav.Item>
+              <LinkContainer to="/settings?tab=users">
+                <Nav.Link eventKey="users">
+                  <FormattedMessage id="config.categories.users" />
+                </Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
+            <Nav.Item>
+              <LinkContainer to="/settings?tab=sharing">
+                <Nav.Link eventKey="sharing">
+                  <FormattedMessage id="config.categories.sharing" />
                 </Nav.Link>
               </LinkContainer>
             </Nav.Item>
@@ -170,6 +188,12 @@ const SettingTabs: React.FC<{ tab: TabKey }> = ({ tab }) => {
             </Tab.Pane>
             <Tab.Pane eventKey="security">
               <SettingsSecurityPanel />
+            </Tab.Pane>
+            <Tab.Pane eventKey="users" unmountOnExit>
+              <SettingsUsersPanel />
+            </Tab.Pane>
+            <Tab.Pane eventKey="sharing" unmountOnExit>
+              <SettingsSharingPanel />
             </Tab.Pane>
             <Tab.Pane eventKey="tasks">
               <SettingsTasksPanel />

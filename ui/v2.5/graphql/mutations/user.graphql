@@ -1,0 +1,34 @@
+mutation UserCreate($input: UserCreateInput!) {
+  userCreate(input: $input) {
+    id
+    username
+    role
+    created_at
+    last_login_at
+  }
+}
+
+mutation UserUpdate($input: UserUpdateInput!) {
+  userUpdate(input: $input) {
+    id
+    username
+    role
+    created_at
+    last_login_at
+  }
+}
+
+mutation UserDelete($id: ID!) {
+  userDelete(id: $id)
+}
+
+mutation ConfigureSharing($input: SharingConfigInput!) {
+  configureSharing(input: $input) {
+    enabled
+    enable_point_system
+    watch_cost
+    download_cost
+    upload_reward
+    curation_reward
+  }
+}

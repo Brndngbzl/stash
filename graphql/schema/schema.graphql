@@ -256,6 +256,16 @@ type Query {
 
   dlnaStatus: DLNAStatus!
 
+  # Users
+  "Returns all users"
+  findUsers: [User!]!
+  "Returns a specific user by ID"
+  findUser(id: ID!): User
+
+  # Sharing
+  "Returns the current sharing configuration"
+  findSharingConfig: SharingConfig!
+
   # Get everything
 
   allScenes: [Scene!]! @deprecated(reason: "Use findScenes instead")
@@ -594,6 +604,18 @@ type Mutation {
   addTempDLNAIP(input: AddTempDLNAIPInput!): Boolean!
   "Removes an IP address from the temporary DLNA whitelist"
   removeTempDLNAIP(input: RemoveTempDLNAIPInput!): Boolean!
+
+  # User management
+  "Creates a new user account"
+  userCreate(input: UserCreateInput!): User!
+  "Updates an existing user's role or password"
+  userUpdate(input: UserUpdateInput!): User!
+  "Deletes a user account"
+  userDelete(id: ID!): Boolean!
+
+  # Sharing configuration
+  "Saves the sharing configuration"
+  configureSharing(input: SharingConfigInput!): SharingConfig!
 }
 
 type Subscription {
