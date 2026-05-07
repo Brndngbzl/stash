@@ -3,8 +3,8 @@ mutation UserCreate($input: UserCreateInput!) {
     id
     username
     role
-    created_at
-    last_login_at
+    createdAt
+    lastLoginAt
   }
 }
 
@@ -13,8 +13,8 @@ mutation UserUpdate($input: UserUpdateInput!) {
     id
     username
     role
-    created_at
-    last_login_at
+    createdAt
+    lastLoginAt
   }
 }
 
@@ -25,10 +25,10 @@ mutation UserDelete($id: ID!) {
 mutation ConfigureSharing($input: SharingConfigInput!) {
   configureSharing(input: $input) {
     enabled
-    enable_point_system
-    watch_cost
-    download_cost
-    upload_reward
-    curation_reward
+    enablePointSystem
+    watchCost
+    downloadCost
+    uploadReward
+    curationReward
   }
 }

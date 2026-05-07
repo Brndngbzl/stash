@@ -3,8 +3,8 @@ query FindUsers {
     id
     username
     role
-    created_at
-    last_login_at
+    createdAt
+    lastLoginAt
   }
 }
 
@@ -13,18 +13,18 @@ query FindUser($id: ID!) {
     id
     username
     role
-    created_at
-    last_login_at
+    createdAt
+    lastLoginAt
   }
 }
 
 query FindSharingConfig {
   findSharingConfig {
     enabled
-    enable_point_system
-    watch_cost
-    download_cost
-    upload_reward
-    curation_reward
+    enablePointSystem
+    watchCost
+    downloadCost
+    uploadReward
+    curationReward
   }
 }
