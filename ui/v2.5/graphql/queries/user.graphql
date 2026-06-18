@@ -1,0 +1,30 @@
+query FindUsers {
+  findUsers {
+    id
+    username
+    role
+    createdAt
+    lastLoginAt
+  }
+}
+
+query FindUser($id: ID!) {
+  findUser(id: $id) {
+    id
+    username
+    role
+    createdAt
+    lastLoginAt
+  }
+}
+
+query FindSharingConfig {
+  findSharingConfig {
+    enabled
+    enablePointSystem
+    watchCost
+    downloadCost
+    uploadReward
+    curationReward
+  }
+}

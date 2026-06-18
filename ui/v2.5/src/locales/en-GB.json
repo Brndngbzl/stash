@@ -276,7 +276,9 @@
       "services": "Services",
       "system": "System",
       "tasks": "Tasks",
-      "tools": "Tools"
+      "tools": "Tools",
+      "users": "Users",
+      "sharing": "Sharing"
     },
     "changelog": {
       "header": "Changelog"
@@ -912,6 +914,61 @@
       "use_stash_hosted_funscript": {
         "description": "When enabled, funscripts will be served directly from Stash to your Handy device without using the third party Handy server. Requires that Stash be accessible from your Handy device, and that an API key is generated if Stash has credentials configured.",
         "heading": "Serve funscripts directly"
+      }
+    },
+    "users": {
+      "heading": "User Management",
+      "roles_heading": "Roles",
+      "manage_users": "Manage Users",
+      "manage_users_desc": "Create, edit and remove user accounts. Assign roles to control access.",
+      "username": "Username",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "password_requirements": "Minimum {minLength} characters.",
+      "role": "Role",
+      "created_at": "Created",
+      "last_login": "Last Login",
+      "no_users": "No users have been created yet.",
+      "create_user": "Create User",
+      "edit_user": "Edit User: {username}",
+      "delete_user": "Delete User",
+      "delete_confirm": "Are you sure you want to delete user {username}? This action cannot be undone.",
+      "roles": {
+        "admin": "Admin",
+        "admin_desc": "Full access. Can manage users, content and all settings.",
+        "moderator": "Moderator",
+        "moderator_desc": "Can approve or reject content submissions and curate metadata.",
+        "user": "User",
+        "user_desc": "Can browse and consume content according to the sharing configuration."
+      },
+      "validation": {
+        "username_required": "Username is required.",
+        "password_too_short": "Password must be at least {minLength} characters.",
+        "passwords_mismatch": "Passwords do not match."
+      },
+      "toast": {
+        "user_created": "User created.",
+        "user_updated": "User updated.",
+        "user_deleted": "User deleted."
+      }
+    },
+    "sharing": {
+      "heading": "Sharing",
+      "enable": "Enable Sharing",
+      "enable_desc": "Allow other users to access content via their own accounts.",
+      "point_system": "Point System",
+      "enable_points": "Enable Point System",
+      "enable_points_desc": "Reward uploads and curation with points. Charge points for watching and downloading.",
+      "watch_cost": "Watch Cost",
+      "watch_cost_desc": "Points deducted when a user watches a scene.",
+      "download_cost": "Download Cost",
+      "download_cost_desc": "Points deducted when a user downloads a file.",
+      "upload_reward": "Upload Reward",
+      "upload_reward_desc": "Points awarded when a user uploads a scene.",
+      "curation_reward": "Curation Reward",
+      "curation_reward_desc": "Points awarded when a user curates or approves metadata.",
+      "toast": {
+        "saved": "Sharing settings saved."
       }
     }
   },

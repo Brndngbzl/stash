@@ -1,0 +1,43 @@
+enum UserRole {
+  ADMIN
+  MODERATOR
+  USER
+}
+
+type User {
+  id: ID!
+  username: String!
+  role: UserRole!
+  createdAt: Time!
+  lastLoginAt: Time
+}
+
+input UserCreateInput {
+  username: String!
+  password: String!
+  role: UserRole!
+}
+
+input UserUpdateInput {
+  id: ID!
+  role: UserRole
+  password: String
+}
+
+type SharingConfig {
+  enabled: Boolean!
+  enablePointSystem: Boolean!
+  watchCost: Int!
+  downloadCost: Int!
+  uploadReward: Int!
+  curationReward: Int!
+}
+
+input SharingConfigInput {
+  enabled: Boolean
+  enablePointSystem: Boolean
+  watchCost: Int
+  downloadCost: Int
+  uploadReward: Int
+  curationReward: Int
+}
